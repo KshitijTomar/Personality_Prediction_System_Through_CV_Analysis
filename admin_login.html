@@ -1,34 +1,172 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Admin-Login_Page</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="/favicon.ico">
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="starter-template.css" rel="stylesheet">
+
+	<style type="text/css">
+	body{
+		background-color: #111;
+		min-height:100%;
+	}
+	.navbar_top_shadow{
+		border-radius: 0;
+		box-shadow: 0 10px 20px black;
+		padding: 20px 0;
+		font-size: 18px;
+	}
+	.navbar-inverse .navbar-brand{
+		color:#f1f1f1;
+		font-size: 25px;
+	}
+	.hero{
+		background-image: url("http://www.anawalls.com/repic/image.php?src=http://www.anawalls.com/images/abstract/spots-reflections-soft-light.jpg&h=800&w=1280");
+		background-repeat: none;
+		background-size: cover;
+		margin-top: -30px;
+	}
+	.hero_title{
+		margin: 150px 0 ;
+		color:#101010;
+		font-family: 'Josefin Sans', sans-serif;
+	}
+
+	.logo {
+		padding: 15px 0;
+		align-content: center;
+		margin-left: 130px;
+		font-size: 25px;
+		color: #aaaaaa;
+		font-weight: bold;
+	}
+	.block {
+		background-color: white;
+		border-style: solid;
+		border-color: lightgrey;
+		border-radius: 5px;
+		padding: 20px;
+		margin: 80px 0px;
+		/*width: 400px !important;*/
+		box-sizing: border-box;
+	}
+
+	.label {
+		font-size: large;
+		font-weight: 500;
+		color: #666;
+	}
+	.footer_note{
+		margin:20px;
+	}
+	.footer_note a{
+		font-weight: 700;
+		text-decoration: none;
+	}
+</style>
+
 </head>
 <body>
-	<navbar>
-		<ul>
-			<li><a href="user_login.html">User Login</a></li>
-			<li><a href="#">Admin Login</a></li>
-		</ul>
-	</navbar>
+	<!-- <nav class="navbar navbar-inverse navbar-fixed-top"> -->
+		<nav class="navbar navbar-inverse navbar_top_shadow">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Personality Prediction System</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+				<!-- <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul> -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="user_login.html">User Login</a></li>
+					<!-- <li><a href="#">Admin Login</a></li> -->
+					<!-- <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li> -->
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
 	<section class="hero">
-		<div class="hero_title">
-			<h2>PERSONALITY PREDICTION SYSTEM</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-12 hero_title">
+					<h2><b>PERSONALITY PREDICTION SYSTEM</b></h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+				</div>
+				<div class="col-lg-4 col-md-12 hero_form">
+					<div class="block">
+						<div class="logo">login</div>
+
+						<form>
+							<div class="form-group">
+								<label class="label" for="text"> User Name </label>
+								<br />
+								<input id="uname" name="uname" type="text" class="form-control" placeholder="Enter your User Name" />
+
+							</div>
+							<div class="form-group">
+								<label class="label" for="password"> Password </label>
+								<br />
+								<input name="pswd" id="pswd" type="password" class="form-control" placeholder="Enter your Password" />
+							</div>
+							<div class="etc-login-form">
+								<p>forgot your password? <a href="#">click here</a></p>
+							</div>
+							<br />
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary" onclick="login_trig()">Login</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<section class="admin_form">
-		
-			Admin Login <br>
-			<input type="text" name="uname" id="uname" placeholder="User Name"><br>
-			<input type="password" name="pswd" id="pswd" placeholder="Password"><br>
-			<button class="btn" onclick="submit()">Login</button>
-		
-	</section>
+	<div class="container">
+		<div class="row">
+			<div class="footer_note">
+				<a href="http://kshitijtomar.tech/project/other_projects/mani_sir_website/index.html">©NPDS Mani Group | All Rights Reserved</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
+
 <script type="text/javascript">
-	function submit(){
+	function login_trig(){
 		if(document.getElementById('uname').value==="admin"	&& document.getElementById('pswd').value==="admin"){
 			window.location.replace("panel.html");
 			top.location="panel.html";
