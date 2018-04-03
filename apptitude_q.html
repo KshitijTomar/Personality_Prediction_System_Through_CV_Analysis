@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin-Apptitude Questions</title>
+</head>
+<body>
+	<navbar>
+		<ul>
+			<li><a href="#">Apptitude Questions</a></li>
+			<li><a href="#">Personality Questions</a></li>
+			<li><a href="#">Job Details</a>
+				<ul>
+					<li><a href="#">Add Job Details</a></li>
+					<li><a href="#">Requirement Details</a></li>
+					<li><a href="#">Prefered CV</a></li>
+					<li><a href="#">Shortlisted CV</a></li>
+				</ul>
+			</li>
+			<li><a href="#">View Details</a>
+				<ul>
+					<li><a href="#">View Apptitude Questions</a></li>
+					<li><a href="#">View Personality Questions</a></li>
+					<li><a href="#">View Job Details</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Logout</a></li>
+		</ul>
+	</navbar>
+
+
+	<section class="apptitude_q_form">
+		<form action="apptitude_q.php" id="add_apptitude_q">
+			Apptitude Questions <br>
+			<br>
+			Type:
+			<select name="apptitude_q_type">		
+				<option value="English">English</option>
+				<option value="Maths">Maths</option>
+				<option value="Programming">Programming</option>
+			</select><br>
+			Question:
+			<input type="text" name="apptitude_q_question"><br>
+			Option 1:
+			<input type="text" name="apptitude_q_option_1"><br>
+			Option 2:
+			<input type="text" name="apptitude_q_option_2"><br>
+			Option 3:
+			<input type="text" name="apptitude_q_option_3"><br>
+			Option 4:
+			<input type="text" name="apptitude_q_option_4"><br>
+			Answer:
+			<input type="text" name="apptitude_q_answer"><br>
+			<input type="submit">
+		</form>
+	</section>
+
+
+
+
+	<section class="personality_q_form">
+		<form action="personality_q.php" id="personality_q">
+			Personality Questions <br>
+			<br>
+			Openness to Experience:
+			<select name="personality_q_openness_to_experience">		
+				<option value="sd">Strongly disagree</option>
+				<option value="d">Disagree</option>
+				<option value="nda">Neither disagree nor agree</option>
+				<option value="a">Agree</option>
+				<option value="sa">Strongly Agree</option>
+			</select><br>
+			Conscientiousness:
+			<select name="personality_q_openness_to_experience">		
+				<option value="sd">Strongly disagree</option>
+				<option value="d">Disagree</option>
+				<option value="nda">Neither disagree nor agree</option>
+				<option value="a">Agree</option>
+				<option value="sa">Strongly Agree</option>
+			</select><br>
+			Extraversion:
+			<select name="personality_q_openness_to_experience">		
+				<option value="sd">Strongly disagree</option>
+				<option value="d">Disagree</option>
+				<option value="nda">Neither disagree nor agree</option>
+				<option value="a">Agree</option>
+				<option value="sa">Strongly Agree</option>
+			</select><br>
+			Agreebieness:
+			<select name="personality_q_openness_to_experience">		
+				<option value="sd">Strongly disagree</option>
+				<option value="d">Disagree</option>
+				<option value="nda">Neither disagree nor agree</option>
+				<option value="a">Agree</option>
+				<option value="sa">Strongly Agree</option>
+			</select><br>
+			Neuroticism:
+			<select name="personality_q_openness_to_experience">		
+				<option value="sd">Strongly disagree</option>
+				<option value="d">Disagree</option>
+				<option value="nda">Neither disagree nor agree</option>
+				<option value="a">Agree</option>
+				<option value="sa">Strongly Agree</option>
+			</select><br>
+			<input type="submit">
+		</form>
+	</section>
+
+
+
+
+
+
+
+
+	<section class="add_job_details">
+		<form action="add_job_details.php" id="add_job_details">
+			Job Details <br>
+			<br>
+			Job ID:
+			<input type="number" name="add_job_details_job_id"><br>
+			Designation:
+			<input type="text" name="add_job_details_designation"><br>
+			Salary:
+			<input type="number" name="add_job_details_salary"><br>
+			Place:
+			<input type="text" name="add_job_details_place"><br>
+			<input type="submit">
+		</form>
+	</section>
+
+
+
+
+
+	<section class="requirement_details">
+		<form action="requirement_details.php" id="requirement_details">
+			Job Requirement<br>
+			<br>
+			Job ID:
+			<select name="requirement_details_job_id">		
+				<option value="id_1">1</option>	
+				<option value="id_2">2</option>
+			</select><br>
+			<!-- php based detail generation -->
+			Designation:<br>
+			Salary:<br>
+			Place:<br>
+
+			Exerience(years):<!-- years -->
+			<input type="number" name="requirement_details_experience"><br>
+			Qualification:
+			<input type="text" name="requirement_details_qualification"><br>
+			Key Skills:
+			<input type="text" name="requirement_details_key_skills"><br>
+
+			<input type="submit">
+		</form>
+	</section>
+
+
+
+
+	<section class="prefered_cv">
+		<form action="prefered_cv.php" id="prefered_cv">
+			Prefered CV<br>
+			<br>
+			Job ID:
+			<select name="requirement_details_job_id">		
+				<option value="id_1">1</option>	
+				<option value="id_2">2</option>
+			</select><br>
+			<!-- php based detail generation -->
+			Designation:<br>
+			Salary:<br>
+			Place:<br>
+
+			Prefered CVs:<!-- years -->
+			<input type="file" name="requirement_details_experience"><br>
+			<input type="submit" placeholder="Upload">
+		</form>
+	</section>
+</body>
+</html>

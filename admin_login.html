@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin-Login_Page</title>
+</head>
+<body>
+	<navbar>
+		<ul>
+			<li><a href="user_login.html">User Login</a></li>
+			<li><a href="#">Admin Login</a></li>
+		</ul>
+	</navbar>
+	<section class="hero">
+		<div class="hero_title">
+			<h2>PERSONALITY PREDICTION SYSTEM</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+		</div>
+	</section>
+
+	<section class="admin_form">
+		
+			Admin Login <br>
+			<input type="text" name="uname" id="uname" placeholder="User Name"><br>
+			<input type="password" name="pswd" id="pswd" placeholder="Password"><br>
+			<button class="btn" onclick="submit()">Login</button>
+		
+	</section>
+</body>
+<script type="text/javascript">
+	function submit(){
+		if(document.getElementById('uname').value==="admin"	&& document.getElementById('pswd').value==="admin"){
+			window.location.replace("panel.html");
+			top.location="panel.html";
+			window.location.assign("panel.html");
+			window.location.href="panel.html"
+			window.event.returnValue = false;
+			window.location = "panel.html";
+			setTimeout(function(){window.location.assign("panel.html");return false;},500);
+		}
+		else{
+			document.getElementById('uname').value="";
+			document.getElementById('pswd').value="";
+		}
+	}
+</script>
+</html>
